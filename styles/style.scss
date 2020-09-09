@@ -1,0 +1,23 @@
+$main-color: orange;
+$header-color: white;
+$burger-color: black;
+$title-color: black;
+
+@import './layout/header';
+@import './layout/inicio/inicio.css';
+
+.container {
+    padding: 100px;
+}
+
+
+.footer {
+    background-color: black;
+    height: 80px;
+
+    .footer-text {
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "audepor",
+  "version": "1.0.0",
+  "description": "AUDEPOR full stack",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/main.ts",
+    "build:clean": "rm -rf .next",
+    "build:ui": "npx next build",
+    "build:server": "npx tsc --project tsconfig.server.json && npx babel .next/production-server -d .next/production-server --extensions \".js\"",
+    "build": "yarn build:clean && yarn build:ui && yarn build:server",
+    "start": "NODE_ENV=production node .next/production-server/main.js"
+  },
+  "keywords": [
+    "audepor"
+  ],
+  "author": "Kevin Bedoya",
+  "license": "ISC",
+  "dependencies": {
+    "@nestjs/common": "^7.4.2",
+    "@nestjs/config": "^0.5.0",
+    "@nestjs/core": "^7.4.2",
+    "@nestjs/platform-express": "^7.4.2",
+    "@nestjs/typeorm": "^7.1.3",
+    "mysql": "^2.18.1",
+    "nest-next": "^9.3.0-beta.0",
+    "next": "^9.5.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.6.2",
+    "sass": "^1.26.10",
+    "typeorm": "^0.2.25"
+  },
+  "devDependencies": {
+    "@nestjs/testing": "^7.4.4",
+    "@types/express": "^4.17.8",
+    "@types/node": "^14.6.1",
+    "@types/react": "^16.9.48",
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "nodemon": "^2.0.4",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  }
+}
